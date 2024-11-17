@@ -1,9 +1,12 @@
+/* fonts imported from google */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
 
+/* applied to all elements */
 * {
     box-sizing: border-box;
 }
 
+/* font families and sizes according to specification */
 body {
     padding: 0;
     margin: 0;
@@ -45,6 +48,7 @@ button {
 
 /*--------------------*/
 
+/* header container */
 header {
     background-color: #ffffff;
     display: flex;
@@ -55,6 +59,7 @@ header {
     width: 100%;
 }
 
+/* navigation bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -64,6 +69,7 @@ nav {
 
 /*--------------------*/
 
+/* main conatiner - grid display */
 main .container {
     padding: 48px;
     max-width: 900px;
@@ -74,6 +80,7 @@ main .container {
     margin: auto auto;
 }
 
+/* article element */
 article {
     border: 1px solid #231651;
     box-shadow: 16px 16px #231651;
@@ -81,12 +88,14 @@ article {
     height: 100%;
 }
 
+/* movie posters */
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
+/* movie content - flex display */
 .info {
     display: flex;
     justify-content: space-between;
@@ -96,10 +105,14 @@ img {
     flex-grow: 1;
 }
 
+/* movie buttons */
 .info button {
     width: 100%;
 }
 
+/* ----------------------------------------- */
+
+/* movies 1, 4, 5 and 6 - horizontal boxes */
 .one, .three {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -111,15 +124,20 @@ img {
 
 .one .movie img {
     height: 100%;
+    /* fit square poster to rectangle frame */
     object-position: top;
     object-fit: cover;
 }
-
+/* movie content in flex row layout */
 .one .info {
     flex-direction: row;
     height: fit-content;
 }
 
+/* ----------------------------------------- */
+
+/* movies 2 and 3 - verticle boxes */
+/* flex column layout */
 .two {
     display: flex;
     flex-direction: column;
@@ -127,6 +145,9 @@ img {
     flex-grow: 1;
 }
 
+/* ----------------------------------------- */
+
+/* movies 4, 5 and 6 - horizontal boxes */
 .three {
     display: flex;
 }
@@ -142,9 +163,14 @@ img {
     object-fit: cover;
 }
 
-/* Tablet */
+/* ---------------------------- */
+/* MEDIA QUERIES */
+
+/* Tablet (720px - 1023px) */
 @media (max-width: 1023px) {
     
+    /* spacing changed according to specifications */
+
     nav {
         gap: 32px;
     }
@@ -157,12 +183,12 @@ img {
         gap: 32px;
     }
 
+    /* movie boxes in grid layout */
     .one, 
     .fifth-movie  {
         grid-column-start: 1;
         grid-column-end: 2;
     }
-
     .second-movie, 
     .fourth-movie, 
     .sixth-movie {
@@ -206,8 +232,9 @@ img {
 
 }
 
-/* Mobile */
+/* Mobile (360px - 719px)*/
 @media (max-width: 719px) {
+    /* font sizes and spacing changed according to specifications */
 
     header {
         box-shadow: none;
@@ -224,18 +251,21 @@ img {
 
     /*--------------------*/
 
+    /* main container - grid layout */
     body main .container {
         grid-template-rows: repeat(6, 1fr);
         gap: 16px;
         margin: 16px 0;
     }
 
+    /* box shadow removed */
     article {
         box-shadow: none;
         grid-column-start: 1;
         grid-column-end: 3; 
     }
 
+    /* movie boxes column assignment */
     .one, 
     .first-movie, 
     .second-movie, 
@@ -247,6 +277,8 @@ img {
         grid-column-end: 3;
     }
 
+    /* ------------------------------- */
+    /* movie boxes row assignment */
     .one, 
     .first-movie {
         grid-row-start: 1;
@@ -277,6 +309,7 @@ img {
         grid-row-start: 6;
         grid-row-end: 7;
     }
+    /* ----------------------- */
 
     .one .movie, 
     .two .movie, 
