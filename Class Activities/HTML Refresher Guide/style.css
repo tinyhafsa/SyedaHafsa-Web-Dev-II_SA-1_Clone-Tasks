@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 5% 20%;
+}
+
+h1, h4 {
+    font-family: "Rock Salt", cursive;
+}
+
+p, a, ul {
+    font-family: "Raleway", sans-serif;
+}
+
+code {
+    background-color: antiquewhite;
+    color: brown;
+    padding: 1px 3px;
+}
+
+pre {
+    padding: 20px;
+    margin: 0px 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
