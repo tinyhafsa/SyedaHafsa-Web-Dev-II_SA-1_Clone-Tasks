@@ -1,0 +1,255 @@
+/* fonts imported from google */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+
+/* specifications - font families and sizes */
+h1 {
+    font-family: "Protest Guerrilla", serif;
+    font-size: 3em;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: "Protest Guerrilla", serif;
+    font-size: 1.7em;
+    font-weight: 100;
+}
+
+p, a {
+    font-family: "Josefin Sans", serif;
+}
+
+body {
+    background-color: #e9e9e9;
+    padding: 0% 20% 0px;
+    margin-bottom: 0%;
+}
+
+/*-------------------------*/
+
+/* header container */
+.header-logo {
+    text-align: center;
+    padding: 50px;
+}
+.header-logo img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-item {
+    padding: 0px 25px 50px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/*-------------------------*/
+
+/* main container */
+main {
+    background-color: white;
+    margin-bottom: 0%;
+}
+
+.heading-section, section.intro-section, section.article-section {
+    padding: 1% 5%;
+}
+
+/* heading styling */
+main header h1 {
+    font-size: 80px;
+    margin: 30px 0px 0px;
+}
+
+/*-------------------------*/
+
+/* introduction section */
+
+.intro-section h2 {
+    margin: 0;
+}
+
+.intro-section p {
+    font-size: 22px ;
+    width: 80%;
+}
+
+/*-------------------------*/
+
+/* article section */
+
+.article-section {
+    padding: 25px 0px 50px;
+    column-count: 3; /* arranges article section into 3 continuous columns */
+    column-gap: 50px;
+}
+.article-one h2 {
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+/*-------------------------*/
+
+/* gallery section */
+.gallery-section {
+    padding: 25px 0px 25px;
+    display: grid; /* arranges images in grid layout */
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+
+}
+
+/* first image - only visible on desktop */
+.image-1 {
+    grid-area: 1 / 1 / 3 / 3; /* takes up space of two rows and two columns */
+
+}
+.gallery-section img {
+    width: 100%;
+}
+
+/*-------------------------*/
+
+/* author section */
+.author-section {
+    padding: 50px 10%;
+    justify-content: space-between;
+    display: flex;
+}
+.author-item {
+    padding: 0 2%;
+}
+.author-item h2 {
+    text-align: center;
+}
+.author-section img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/*-------------------------*/
+
+/* footer section */
+
+footer {
+    margin-bottom: 0%;
+    padding: 2% 5%;
+    text-align: center;
+    background-color: #14181d;
+    color: white;
+}
+
+/*-------------------------*/
+
+/* MEDIA QUIRIES */
+
+/* tablet size (720px - 1023px) */
+@media (max-width: 1023px) {
+    /* font sizes and spacing changed according to specifications */
+    body {
+        padding: 0% 8% 0px;
+    }
+    .header-logo {
+        padding: 30px;
+    }
+    .header-logo img {
+        width: 80px;
+    }
+    .nav-item {
+        padding: 30px ;
+    }
+    h1, h2 {
+        text-align: center;
+    }
+    main header h1 {
+        font-size: 60px;
+    }
+    .intro-section p {
+        width: 100%;
+    }
+    /* articles displayed in one column */
+    .article-section {
+        column-count: 1;
+    }
+    .article-section p, .author-section p {
+        font-size: 18px;
+    }
+
+    /* first image hidden */
+    .image-1 {
+        display: none;
+    }
+
+    /* gallery content displayed in two column */
+    .gallery-section {
+        padding: 30px 0px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .author-section {
+        padding: 30px 5%;
+    }
+}
+
+/* large mobile size (540px - 719px) */
+@media (max-width: 719px) {
+    /* font sizes and spacing changed according to specifications */
+
+    body {
+        padding: 0% 0% 0px;
+        margin: 0px;
+    }
+    .nav-item {
+        padding: 20px ;
+    }
+
+    /* gallery content displayed in one column */
+    .gallery-section {
+        padding: 20px 0px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    /* arranges author content into column flex layout */
+    .author-section {
+        padding: 10px 5% 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* small mobile size (360px - 539px) */
+@media only screen and (max-width: 539px) and (min-width: 360px) {
+    /* font sizes and spacing changed according to specifications */
+
+    h2 {
+        margin-top: 12px;
+    }
+    .nav-item {
+        padding: 12px ;
+    }
+    main header h1 {
+        font-size: 40px;
+    }
+    a {
+        font-size: 14px;
+    }
+    .article-section {
+        padding: 12px 0px;
+    }
+    .gallery-section {
+        padding: 12px 0px;
+    }
+    .author-section {
+        padding: 12px 12px;
+    }
+}
